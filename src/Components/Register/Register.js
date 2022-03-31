@@ -21,8 +21,8 @@ const Register = ({ setIsTokenGenerated, setToken }) => {
         console.log(userData);
         const url = `http://localhost:4000/getToken`;
         userData ? axios.post(url, userData).then((data) => {
+            setToken(data.data);
             setIsTokenGenerated(true);
-            setToken(data.data)
             console.log(data.data);
         }) : console.log("no data found");
     }
