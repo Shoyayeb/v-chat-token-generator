@@ -27,7 +27,7 @@ const SideBar = () => {
                 }}
                 variant="persistent"
                 anchor="left"
-                open="true"
+                open
             >
                 <DrawerHeader sx={{ display: "flex", justifyContent: "center", alignItems: "center", my: 3 }}>
                     <svg

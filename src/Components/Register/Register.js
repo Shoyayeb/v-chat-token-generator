@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Button, Container, TextField, Typography } from '@mui/material';
+import { Button, TextField } from '@mui/material';
 import { Box } from '@mui/system';
 import axios from 'axios';
 import React, { useState } from 'react';
@@ -35,44 +35,43 @@ const Register = ({ setIsTokenGenerated, setToken }) => {
         },
     }));
     return (
-        <Container sx={{ my: "auto" }}>
-            <Typography sx={{ fontWeight: 'bold', mx: 3, fontFamily: "Inter" }} variant="h4">Register</Typography>
-            <Box component='form' noValidate onSubmit={handleGenerate} className='formRoot'>
-                <TextField
-                    key="name"
-                    required
-                    name='name'
-                    id='user-name'
-                    autoComplete='name'
-                    onChange={(e) => handleOnChange(e)}
-                    label="Name"
-                    size="small"
-                    color='success'
-                    value={userData.name}
-                    sx={{ width: 3 / 4, my: 3, fontFamily: "Inter", borderWidth: 1 }}
-                    className='input'
-                    type='text'
-                />
+        <Box component='form' noValidate onSubmit={handleGenerate} className='formRoot'>
+            <TextField
+                key="name"
+                fullWidth
+                required
+                name='name'
+                id='user-name'
+                autoComplete='name'
+                onChange={(e) => handleOnChange(e)}
+                label="Name"
+                size="small"
+                color='success'
+                value={userData.name}
+                sx={{ my: 3, fontFamily: "Inter", borderWidth: 1, border: 1, borderRadius: 1, borderColor: "#11cb5f" }}
+                className='input'
+                type='text'
+            />
 
-                <TextField
-                    key="mobile"
-                    required
-                    name='mobile'
-                    id='user-mobile'
-                    autoComplete='phone'
-                    onChange={handleOnChange}
-                    label="Mobile Number"
-                    size="small"
-                    color='success'
-                    value={userData.mobile}
-                    sx={{ width: 3 / 4, mb: 3, fontFamily: "Inter", borderWidth: 1 }}
-                    className='input'
-                    type="tel" />
-                <GenerateButton variant="contained" sx={{ display: "flex", flexDirection: "column", fontFamily: "Inter" }} color="success" className='generateButton' type='submit'>
-                    Generate Token
-                </GenerateButton>
-            </Box>
-        </Container>
+            <TextField
+                key="mobile"
+                fullWidth
+                required
+                name='mobile'
+                id='user-mobile'
+                autoComplete='phone'
+                onChange={handleOnChange}
+                label="Mobile Number"
+                size="small"
+                color='success'
+                value={userData.mobile}
+                sx={{ mb: 3, fontFamily: "Inter", borderWidth: 1, border: 1, borderRadius: 1, borderColor: "#11cb5f" }}
+                className='input'
+                type="tel" />
+            <GenerateButton variant="contained" sx={{ display: "flex", flexDirection: "column", fontFamily: "Inter", borderRadius: 10 }} color="success" className='generateButton' type='submit'>
+                Generate Token
+            </GenerateButton>
+        </Box>
     );
 };
 
