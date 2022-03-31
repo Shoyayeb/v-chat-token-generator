@@ -29,7 +29,7 @@ const SideBar = () => {
                 anchor="left"
                 open="true"
             >
-                <DrawerHeader sx={{ display: "flex", justifyContent: "start", alignItems: "center" }}>
+                <DrawerHeader sx={{ display: "flex", justifyContent: "center", alignItems: "center", my: 3 }}>
                     <svg width="42" height="38" viewBox="0 0 42 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_i_5_10)">
                             <path d="M8 12.2319L22.1933 11.9591L28.5316 0L29.8531 14.1478L40.7635 20.5316L27.5732 22.1267L20.2319 32.7635L19.9134 19.938L8 12.2319Z" fill="#21978B" />
