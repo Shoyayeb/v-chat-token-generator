@@ -1,0 +1,16 @@
+.input {
+  background: #ffffff;
+  border-radius: 4px;
+}
+.generateButton {
+  padding: 18px 48px;
+  background: #21978b;
+  border-radius: 27px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+}
+.interFont{
+    font-family: "Inter" !important;
+}
