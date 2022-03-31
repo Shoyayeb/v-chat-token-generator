@@ -6,6 +6,7 @@ import Token from '../Token/Token';
 
 const Root = () => {
     const [isTokenGenerated, setIsTokenGenerated] = useState(false);
+    const [token, setToken] = useState('');
     return (
         <div>
             <Paper sx={{ display: "flex", flexDirection: { md: "row", xs: "column" }, height: "100vh" }} style={{ background: "#E9E9E9" }}>
@@ -13,7 +14,7 @@ const Root = () => {
 
                 </Box> */}
                 <SideBar />
-                {isTokenGenerated ? <Token /> : <Register setIsTokenGenerated={setIsTokenGenerated} />}
+                {isTokenGenerated ? <Token token={token} setToken={setToken} /> : <Register setIsTokenGenerated={setIsTokenGenerated} token={token} setToken={setToken} />}
             </Paper>
         </div>
     );
